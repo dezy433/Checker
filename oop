@@ -1,0 +1,168 @@
+class employee_data:
+    def _init__(self, name, l_name, position, year, month, day, graduate, ids):
+            self.first_name = name
+            self.last_name = l_name
+            self.position = position
+            self.year = year
+            self.month = month
+            self.day = day
+            self.graduate = None
+            self.id = ids
+
+
+    def print(self):
+        print(self.first_name)
+        print(self.last_name)
+        print(self.position)
+        print(self.year)
+        print(self.month)
+        print(self.day)
+        print(self.graduate)
+        print(self.id)
+
+
+    def id_func(self):
+        while True:
+            id_str = str()
+            if id_str.isdigit():
+                id_int = int(id_str)
+                self.ids = id_int
+                return id_int
+            else:
+                print("Add numbers")
+
+
+    def first_name_func(self):
+        while True:
+            name = input("name")
+            if len(name.strip()) > 2:
+                self.first_name = name
+                return name
+
+
+    def last_name_func(self):
+        while True:
+            l_name = input("Last name")
+            if len(l_name.strip()) > 2:
+                self.last_name = l_name
+                return l_name
+
+
+    def birth_year_func(self):
+        while True:
+            birth_year_str = input("Birth Year")
+            if birth_year_str.isdigit():
+                birth_year = int(birth_year_str)
+            if (birth_year >= 1900) and (birth_year <= 2004):
+                self.birth_year= birth_year
+                return birth_year
+            else:
+                print("Years ranging from 1990-2004")
+
+
+    def birth_month_func(self):
+        while True:
+            birth_month_str = input("Birth month")
+            if birth_month_str.isdigit():
+                birth_month = int(birth_month_str)
+            if (birth_month >= 1) and (birth_month <= 12):
+                self.birth_month = birth_month
+                return birth_month
+            else:
+                print("Please enter as a number between 1 and 12")
+
+
+    def bday_func(self):
+        while True:
+            bday_str = input("Birth Day ")
+            if bday_str.isdigit():
+                bday = int(bday_str)
+            if (bday >= 1) and (bday <= 31):
+                self.day = bday
+                return bday
+            else:
+                print("Please enter as a number between 1 and 31")
+
+    def position_func(self):
+        while True:
+            position_str = input("Position")
+            if position_str.strip() > 0:
+                position = str(position_str)
+                self.position = position_str
+                return position
+            else:
+                print("Please enter your position")
+
+
+    def graduate_func(self):
+        answers = ["yes", "no", "Yes", "No"]
+        while True:
+            graduate_str = input("Have you graduatd?")
+            if graduate_str in answers:
+               # self.graduate = graduate.str
+                return graduate_str
+            else:
+                print("Please answer 'Yes' or 'No'")
+
+
+    def add_employee(self):
+        ids = employee_data.id_func()
+        first_name = employee_data.first_name_func()
+        last_name = employee_data.last_name_func()
+        bday = employee_data.bday_func()
+        birth_month = employee_data.birth_month_func()
+        birth_year = employee_data.birth_year_func()
+        pos = employee_data.position_func()
+        grad = employee_data.graduate_func()
+
+        employee = {
+            "ID": ids,
+            "First name": first_name,
+            "Last name": last_name,
+            "Birth Year": birth_year,
+            "Birth Month": birth_month,
+            "Birth Day": bday,
+            "Position": pos,
+            "University": grad,
+    }
+"""
+        while True:
+            employee_dic.append(employee)# update function
+            return employee
+"""
+
+if __name__ == '__main__':
+    employees_list = []
+    employee_dict = {}
+    """"
+        print("Select operation.")
+        print("1.Add an Employee")
+        print("2.Remove employee")
+        print("3.Get a list of employees")
+        print("4.Retreive employee (By ID)")
+        print("5.Update employee data")
+        print("6.Quit")
+    """
+    employees = employee_data()
+    employee
+
+    for index in range(4):
+
+        employee_id = input("Id")
+        employee_first_name = input("first-name")
+        employee_data.first_name_func()
+        employee_data.print()
+        employee_data.add_employee
+        employee_last_name = input("last-name")
+        emplolyee_birth_day =input("Birth day")
+        employee_birth_month = input("Birth month")
+        employee_birth_year = input("Birth year")
+        employee_position = input("Position")
+        employee_graduate = input("Did you graduate?")
+        employee_dict[employee_first_name,employee_last_name,employee_id,employee_birth_month,emplolyee_birth_day,employee_birth_year,employee_position,employee_graduate]
+""""
+    for employee_key in employee_dict:
+        print(employee_key)
+        print(emplployee_dict[employee_key])
+        employee_dict[employee_key].print
+"""
